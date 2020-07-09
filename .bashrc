@@ -1,4 +1,4 @@
-alias resource='source ~/.bash_profile'
+alias resource='source ~/.bashrc'
 alias push='git add .; git commit -m "iterating"; git push'
 alias baffin="ssh -L 5901:localhost:5901 -N -f -l jalverio baffin.csail.mit.edu"
 alias devon="ssh -L 5901:localhost:5901 -N -f -l jalverio devon.csail.mit.edu"

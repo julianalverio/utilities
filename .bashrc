@@ -37,11 +37,11 @@ unset __conda_setup
 
 # export HOME=/Users/julianalverio
 
-alias pushall='START=$PWD; cd /Users/julianalverio/code/fetch_gym; push; cd /Users/julianalverio/code/sentence_tracker; push; cd /Users/julianalverio/code/soft_actor_critic; push; cd /Users/julianalverio/code/original_hmmlearn; push; cd $START'
+alias pushall='START=$PWD; cd /Users/julianalverio/code/fetch_gym; push; cd /Users/julianalverio/code/sentence_tracker; push; cd /Users/julianalverio/code/soft_actor_critic; push; cd /Users/julianalverio/code/original_hmmlearn; push; cd /Users/julianalverio/code/utilities; push; cd $START'
 alias update='pip install --user --upgrade ~/code/original_hmmlearn/'
 alias show='scp jalverio@melville.csail.mit.edu:/storage/jalverio/test.png ~/Desktop/ && open ~/Desktop/test.png'
 alias pull='git pull'
-alias pullall='start=$PWD; cd /Users/julianalverio/code/fetch_gym; pull; cd /Users/julianalverio/code/sentence_tracker; pull; cd /Users/julianalverio/code/soft_actor_critic; pull; cd /Users/julianalverio/code/original_hmmlearn/; pull; cd $start'
+alias pullall='start=$PWD; cd /Users/julianalverio/code/fetch_gym; pull; cd /Users/julianalverio/code/sentence_tracker; pull; cd /Users/julianalverio/code/soft_actor_critic; pull; cd /Users/julianalverio/code/original_hmmlearn/; pull; cd /Users/julianalverio/code/utilities; push; cd $start'
 
 # DO NOT ERASE
 # sudo mdutil -E /
@@ -60,6 +60,7 @@ alias charm='open -a pycharm'
 
 alias subl='open -a "sublime text"'
 alias convert='cd ~/Desktop; magick mogrify -monitor -format jpg *.HEIC'
+alias emacs='emacs -nw'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/julianalverio/google-cloud-sdk/path.bash.inc' ]; then . '/Users/julianalverio/google-cloud-sdk/path.bash.inc'; fi
@@ -67,6 +68,8 @@ if [ -f '/Users/julianalverio/google-cloud-sdk/path.bash.inc' ]; then . '/Users/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/julianalverio/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/julianalverio/google-cloud-sdk/completion.bash.inc'; fi
 
-export COPPELIASIM_ROOT=/Users/julianalverio/code/CoppeliaSim_Edu_V4_0_0_Mac
+export COPPELIASIM_ROOT=/storage/jalverio/CoppeliaSim_Edu_V4_1_0_Ubuntu18_04
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
 export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
+
+

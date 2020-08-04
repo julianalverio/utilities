@@ -2,6 +2,21 @@ import cv2
 import os
 import copy
 
+def fill_diagonal(arr, value, k):
+    height, width = arr.shape
+    for row_idx in range(height):
+        for col_idx in range(width):
+            if (row_idx + k) == col_idx:
+                arr[row_idx, col_idx] = value
+
+def make_transmat(size, p=0.99):
+    transmat = np.zeros((size, size))
+    fill_diagonal(transmat, p, 0)
+    fill_diagonal(transmat, 1-p, 1)
+    transmat[-1, -1] = 1.
+    return transmat
+
+
 def write_mp4(frames, path, fps=5):
     shape = (500, 500)
     writer = cv2.VideoWriter(path, 0x7634706d, fps, shape)

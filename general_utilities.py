@@ -58,10 +58,3 @@ def get_path(path, check=True):
     msg = 'Path error while checking %s \n %s is valid, but %s is not' % (universal_path, longest_path, previous_path)
     raise FileNotFoundError(msg)
 
-def fill_diagonal(arr, value, k):
-    height, width = arr.shape
-    for row_idx in range(height):
-        for col_idx in range(width):
-            if (row_idx + k) == col_idx:
-                arr[row_idx, col_idx] = value
-

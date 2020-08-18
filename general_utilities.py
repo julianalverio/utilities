@@ -1,6 +1,7 @@
 import cv2
 import os
 import copy
+import numpy as np
 
 def fill_diagonal(arr, value, k):
     height, width = arr.shape

@@ -18,10 +18,13 @@ def make_transmat(size, p=0.99):
     return transmat
 
 
-def write_mp4(frames, path, fps=5):
+def write_mp4(frames, path, fps=5, switch=True):
     shape = (500, 500)
     writer = cv2.VideoWriter(path, 0x7634706d, fps, shape)
     for frame in frames:
+        red = frame[:, :, 0].copy()
+        frame[:, :, 0] = frame[:, :, 2]
+        frame[:, :, 2] = red
         writer.write(frame)
     writer.release()
 

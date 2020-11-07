@@ -20,7 +20,8 @@ def make_transmat(size, p=0.99):
 
 def write_mp4(frames, path, fps=5, switch=True):
     shape = (500, 500)
-    writer = cv2.VideoWriter(path, 0x7634706d, fps, shape)
+    fourcc = cv2.VideoWriter_fourcc(*'avc1')
+    writer = cv2.VideoWriter(path, fourcc, fps, shape)
     for frame in frames:
         if switch:
             red = frame[:, :, 0].copy()
